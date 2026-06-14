@@ -1,45 +1,122 @@
- // Carousel otomatis berganti tiap 2 detik
-    const myCarousel = document.querySelector('#galeriCarousel');
-    const carousel = new bootstrap.Carousel(myCarousel, {
-      interval: 3000,
-      ride: 'carousel',
-      touch: true
+// ======================
+// LIGHTBOX GALLERY
+// ======================
+
+const galleryImages = document.querySelectorAll('.gallery_grid img');
+
+const lightbox = document.getElementById('lightbox');
+
+const lightboxImg = document.getElementById('lightboxImg');
+
+const closeLightbox = document.getElementById('closeLightbox');
+
+const nextBtn = document.getElementById('nextBtn');
+
+const prevBtn = document.getElementById('prevBtn');
+
+let currentIndex = 0;
+
+// OPEN IMAGE
+galleryImages.forEach((img, index) => {
+
+    img.addEventListener('click', () => {
+
+        currentIndex = index;
+
+        showImage();
+
+        lightbox.classList.add('show');
+
     });
 
-    // Lightbox dengan navigasi
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const lightboxModal = new bootstrap.Modal(document.getElementById('lightboxModal'));
-    const lightboxImage = document.getElementById('lightboxImage');
-    let currentIndex = 0;
+});
 
-    function showImage(index) {
-      if (index < 0) index = thumbnails.length - 1;
-      if (index >= thumbnails.length) index = 0;
-      currentIndex = index;
-      lightboxImage.src = thumbnails[currentIndex].src;
+// SHOW IMAGE
+function showImage(){
+
+    lightboxImg.src = galleryImages[currentIndex].src;
+
+}
+
+// CLOSE
+closeLightbox.addEventListener('click', () => {
+
+    lightbox.classList.remove('show');
+
+});
+
+// NEXT
+nextBtn.addEventListener('click', () => {
+
+    currentIndex++;
+
+    if(currentIndex >= galleryImages.length){
+
+        currentIndex = 0;
+
     }
 
-    thumbnails.forEach((img, i) => {
-      img.addEventListener('click', () => {
-        currentIndex = i;
-        showImage(currentIndex);
-        lightboxModal.show();
-      });
-    });
+    showImage();
 
-    // Tombol panah di lightbox
-    document.querySelector('.lightbox-prev').addEventListener('click', () => {
-      showImage(currentIndex - 1);
-    });
-    document.querySelector('.lightbox-next').addEventListener('click', () => {
-      showImage(currentIndex + 1);
-    });
+});
 
-    // Navigasi keyboard ← → saat modal terbuka
-    document.addEventListener('keydown', (e) => {
-      const isShown = document.getElementById('lightboxModal').classList.contains('show');
-      if (isShown) {
-        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-      }
-    });
+// PREV
+prevBtn.addEventListener('click', () => {
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+
+        currentIndex = galleryImages.length - 1;
+
+    }
+
+    showImage();
+
+});
+
+// ======================
+// SWIPE MOBILE
+// ======================
+
+let startX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+
+    startX = e.touches[0].clientX;
+
+});
+
+lightbox.addEventListener('touchend', (e) => {
+
+    let endX = e.changedTouches[0].clientX;
+
+    // SWIPE LEFT
+    if(startX - endX > 50){
+
+        currentIndex++;
+
+        if(currentIndex >= galleryImages.length){
+
+            currentIndex = 0;
+
+        }
+
+        showImage();
+    }
+
+    // SWIPE RIGHT
+    if(endX - startX > 50){
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+
+            currentIndex = galleryImages.length - 1;
+
+        }
+
+        showImage();
+    }
+
+});
