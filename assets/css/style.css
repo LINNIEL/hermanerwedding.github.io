@@ -42,7 +42,7 @@ body{
 
     z-index: 9998;
 
-    background-image: url('../bg/bg1.JPG');
+    background-image: url('../bg/23.JPG');
     background-size: cover;
     background-position: center;
 
@@ -201,7 +201,7 @@ body{
 
 .linniel_3{
     position: relative;
-    background-image: url('../bg/20.jpeg');
+    background-image: url('../bg/20.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -363,6 +363,16 @@ body{
 
     .gallery-grid .wide {
       grid-column: span 2;
+    }
+
+    .linniel_5{
+    position: relative;
+    background-image: url('../bg/bg_cream.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 80px 25px;
     }
 
 
