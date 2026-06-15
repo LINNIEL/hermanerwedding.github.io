@@ -294,6 +294,8 @@ body{
     padding: 80px 0;
     background-image: url('../bg/bg_cream.jpg');
     overflow: hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
 }
 
 /* TITLE */
@@ -334,6 +336,20 @@ body{
     flex-shrink: 0;
 
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.slider_track{
+
+    will-change: transform;
+
+    transform: translateZ(0);
+
+    backface-visibility: hidden;
+}
+.slider_wrapper{
+
+    overflow: hidden;
+
+    contain: paint layout;
 }
 
 /* ANIMATION */

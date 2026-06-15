@@ -38,20 +38,7 @@ openBtn.addEventListener("click", function(){
 
 });
 
-// ======================
-// AUTO SLIDER PAUSE
-// ======================
 
-const sliderTrack = document.querySelector('.slider_track');
+const sliderTrack = document.getElementById("sliderTrack");
 
-sliderTrack.addEventListener('mouseenter', () => {
-
-    sliderTrack.style.animationPlayState = 'paused';
-
-});
-
-sliderTrack.addEventListener('mouseleave', () => {
-
-    sliderTrack.style.animationPlayState = 'running';
-
-});
+sliderTrack.innerHTML += sliderTrack.innerHTML;
