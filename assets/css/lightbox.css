@@ -1,176 +1,241 @@
-/* =========================
-   GALLERY
-========================= */
 
+/* ===================================== */
+/* GALLERY */
+/* ===================================== */
 
-/* GRID */
-.gallery_grid{
-
-    display: grid;
-
-    grid-template-columns: repeat(6, 1fr);
-
-    gap: 10px;
-    width: 100%;
-
-    padding: 30px 20px;
+.linniel_gallery{
+    width:100%;
+    max-width:400px;
+    margin:auto;
+    padding:20px 12px;
 }
 
-/* ITEM */
-.item{
-
-    overflow: hidden;
-
-    border-radius: 10px;
-
-    cursor: pointer;
+.linniel_gallery img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 /* FOTO */
-.item img{
 
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: 0.4s ease;
+.foto{
+    overflow:hidden;
+    cursor:pointer;
+    border:4px solid white;
+    background:white;
 }
 
-.item:hover img{
-
-    transform: scale(1.05);
+.foto img{
+    transition:0.5s;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-
-.item1{
-    grid-column: span 2;
-    height: 190px;
+.foto:hover img{
+    transform:scale(1.05);
 }
 
-.item2{
-    grid-column: span 4;
-    height: 190px;
+/* ROW */
+
+.gallery_row_1,
+.gallery_row_2,
+.gallery_row_3,
+.gallery_row_5{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
 }
 
-.item3{
-    grid-column: span 4;
-    height: 160px;
+.gallery_row_4{
+    margin-bottom:10px;
 }
 
-.item4{
-    grid-column: span 2;
-    height: 160px;
+/* SHAPE */
+
+.landscape{
+    width:58%;
+    height:120px;
 }
 
-.item5,
-.item6,
-.item7{
-    grid-column: span 2;
-    height: 170px;
+/* ===================================== */
+/* HEART PERFECT */
+/* ===================================== */
+
+.heart{
+    width:160px;
+    height:160px;
+
+    position:relative;
+
+    transform:rotate(-45deg);
+
+    overflow:hidden;
+
+    margin-top:-20px;
+
+    z-index:10;
+
+    flex-shrink:0;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   LIGHTBOX
-========================= */
+/* SHAPE HEART */
 
-.lightbox{
+.heart::before,
+.heart::after{
+    content:"";
 
-    position: fixed;
+    position:absolute;
 
-    inset: 0;
+    width:160px;
+    height:160px;
 
-    background: rgba(0,0,0,0.95);
+    background:white;
 
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 0.4s ease;
-
-    z-index: 99999;
+    border-radius:50%;
 }
 
-/* ACTIVE */
-.lightbox.show{
+/* LINGKARAN KIRI */
 
-    opacity: 1;
-    visibility: visible;
+.heart::before{
+    top:-80px;
+    left:0;
+}
+
+/* LINGKARAN KANAN */
+
+.heart::after{
+    top:0;
+    left:80px;
 }
 
 /* IMAGE */
+
+.heart img{
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    object-fit:cover;
+
+    transform:rotate(45deg) scale(1.45);
+
+    top:0;
+    left:0;
+
+    z-index:2;
+}
+
+/* OVERLAY PUTIH AGAR RAPI */
+
+.heart_border{
+    position:absolute;
+
+    inset:0;
+
+    background:white;
+
+    z-index:1;
+}
+
+
+.portrait{
+    width:28%;
+    height:150px;
+}
+
+.landscape_small{
+    width:72%;
+    height:150px;
+}
+
+.landscape_big{
+    width:68%;
+    height:150px;
+}
+
+.full{
+    width:100%;
+    height:170px;
+}
+
+.small{
+    width:33.333%;
+    height:110px;
+}
+
+/* ===================================== */
+/* LIGHTBOX */
+/* ===================================== */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.95);
+
+    z-index:999999;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
 .lightbox img{
-
-    width: 90%;
-
-    max-width: 400px;
-
-    max-height: 80vh;
-
-    object-fit: contain;
-
-    border-radius: 15px;
+    width:90%;
+    max-width:400px;
+    max-height:80vh;
+    object-fit:contain;
 }
 
 /* CLOSE */
+
 .close_btn{
+    position:absolute;
+    top:20px;
+    right:20px;
 
-    position: absolute;
+    width:45px;
+    height:45px;
 
-    top: 20px;
-    right: 20px;
+    border:none;
+    border-radius:50%;
 
-    color: white;
+    font-size:24px;
 
-    font-size: 30px;
-
-    cursor: pointer;
-
-    z-index: 2;
+    background:white;
 }
 
-/* NAV BUTTON */
+/* NAV */
+
 .nav_btn{
+    position:absolute;
+    top:50%;
 
-    position: absolute;
+    transform:translateY(-50%);
 
-    top: 50%;
+    width:50px;
+    height:50px;
 
-    transform: translateY(-50%);
+    border:none;
+    border-radius:50%;
 
-    background: rgba(255,255,255,0.2);
+    background:white;
 
-    border: none;
-
-    color: white;
-
-    width: 45px;
-    height: 45px;
-
-    border-radius: 50%;
-
-    font-size: 24px;
-
-    cursor: pointer;
-
-    backdrop-filter: blur(5px);
+    font-size:25px;
 }
 
-/* PREV */
-.prev_btn{
-    left: 15px;
+.prev{
+    left:15px;
 }
 
-/* NEXT */
-.next_btn{
-    right: 15px;
+.next{
+    right:15px;
 }
+

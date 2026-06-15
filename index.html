@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Herman & Er</title>
-  <link rel="icon" type="image/png" href="assets/dec/thumb.webp">
+    <title>Herman & Er</title>
+    <link rel="icon" type="image/png" href="assets/dec/thumb.webp">
 
     <meta property="og:title" content="Undangan Pernikahan Herman & Er">
     <meta property="og:description" content="Klik untuk membuka undangan pernikahan kami">
@@ -18,95 +19,125 @@
     <meta property="og:site_name" content="Undangan Pernikahanan Herman & Er ">
     <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Story+Script&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP 5 -->
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-  <link rel="stylesheet" href="assets/css/countdown.css">
-  <link rel="stylesheet" href="assets/css/loader.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/countdown.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
 
 </head>
 <body>
 
-  <div id="loading">
+<div class="mobile_wrapper">
+
+<div id="loading">
             <img src="assets/dec/MOTION.gif" alt="Loading..." class="loader">
         </div>
+    <!-- MUSIC -->
 
-<div class="wrapper">
+    <audio id="music" loop>
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
 
-  <!-- ======================
-       COVER
-  ======================= -->
+    <!-- MUSIC BUTTON -->
 
-  <section class="cover_page" id="coverPage">
+    <button class="music_button" id="musicBtn">
+        ⏸
+    </button>
 
-    <div class="cover_overlay"></div>
+    <!-- ===================================== -->
+    <!-- COVER -->
+    <!-- ===================================== -->
 
-    <div class="cover_inner">
+    <section class="linniel_1" id="cover">
 
-      <!-- ATAS -->
-      <div class="cover_top">
+        <div class="overlay"></div>
 
-        <h1 class="couple_name">
-          <p class="titl">The Wedding of</p>
-          <p class="name">Herman & Er</p>
-        </h1>
+        <div class="container-fluid h-100 position-relative z-2">
 
-      </div>
+            <div class="row h-100">
 
-      <!-- BAWAH -->
-      <div class="cover_bottom">
+                <div class="col-12 d-flex flex-column justify-content-between align-items-center text-center text-white py-5 px-4">
 
-        <p class="mb-2">
-          Kepada Yang Terhormat
-        </p>
+                    <!-- ATAS -->
 
-        <h3 id="guestName" class="namatamu">
-          Nama Tamu
-        </h3>
+                    <div class="nama_mempelai text-center">
+                        <p class="text-start">The Wedding Of</p>
+                        <p class="nama">
+                            Herman & Er
+                        </p>
+                    </div>
 
-        <button class="btn_open mt-4" id="openInvitation">
-          Buka Undangan
-        </button>
+                    <!-- BAWAH -->
 
-      </div>
+                    <div class="tamu_box">
+                        <p>Kepada YTH</p>
+                        <div id="nama_tamu" class="tamu">
+                            Tamu Undangan
+                        </div>
 
-    </div>
+                        <button class="btn btn-light rounded-pill px-4 py-2 fw-bold" id="bukaUndangan">
 
-  </section>
+                            Buka Undangan
 
-  <!-- ======================
-       MAIN CONTENT
-  ======================= -->
+                        </button>
 
-  <main id="mainContent">
+                    </div>
 
-    <!-- LINNIEL 1 -->
-    <section class="linniel_1">
+                </div>
 
-      <div class="linniel_1_bg"></div>
+            </div>
 
-      <div class="linniel_1_content">
-
-        <p class="kutipan">
-          "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia"
-        </p>
-        <hr class="custom">
-        <p class="ayat">" Matius 19 : 6 "</p>
-
-      </div>
+        </div>
 
     </section>
 
-    <!-- LINNIEL 2 -->
+    <!-- ===================================== -->
+    <!-- SECTION 2 -->
+    <!-- ===================================== -->
+
     <section class="linniel_2">
 
-      <div class="content_box">
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12">
+
+                    <div class="content text-center text-white">
+                        <p class="kutipan">
+                            "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia"
+                         </p>
+                <hr class="custom">
+                         <p class="ayat">" Matius 19 : 6 "</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SECTION 3 -->
+    <!-- ===================================== -->
+
+    <section class="linniel_3">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 text-center">
+                    <div class="content_box">
         <p class="undang">Dengan kerendahan hati dan ungkapan Syukur atas Karunia Tuhan
           kami mengundang Bapak / Ibu / Saudara / I untuk menghadiri acara pernikahan kami
         </p>
@@ -135,11 +166,27 @@
       </div>
       </div>
 
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- LINNIEL 3 -->
-    <section class="linniel_3">
-      <div class="content_box">
+    <!-- ===================================== -->
+    <!-- SECTION 4 -->
+    <!-- ===================================== -->
+
+    <section class="linniel_4">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 text-center">
+
+                    <div class="content_box">
         <div class="justify-content-center text-center wrapper_2">
             <p class="up fs-5 fw-bold mt-2 text-light">Adat</p>
         <div class="Pemberkatan text-center text-light mt-4">
@@ -184,7 +231,7 @@
         </div>
       </div>
 
-                <div class="justify-content-center align-items-center d-flex pt-5">
+      <div class="justify-content-center align-items-center d-flex pt-5">
                     <div id="ocountdwn" class="hitungan-mundur zoom-in delay-3">
                                 <p class="countdown text-light text-center">Hitungan mundur ke Acara</p>
                                 <div id='tiles'></div>
@@ -197,126 +244,234 @@
                     </div>
                 </div>
 
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- LINNIEL 4 -->
-    <section class="linniel_4">
-      <h1 class="text-center mb-3">gallery</h1>
+    <!-- ===================================== -->
+    <!-- SECTION 5 -->
+    <!-- ===================================== -->
+<section class="linniel_5">
 
-    <div class="slider_wrapper">
+    <div class="container">
 
-        <div class="slider_track">
+        <div class="row justify-content-center">
 
-            <!-- FOTO -->
+            <div class="col-12 text-center">
 
-            <img src="assets/foto/toWEBP/1.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/12.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/20.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/23.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/11.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/24.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/13.webp" loading="lazy" decoding="async">
-            <img src="assets/foto/toWEBP/18.webp" loading="lazy" decoding="async">
+                <h2 class="mb-4 text-dark">
+                    Galeri Foto
+                </h2>
+
+                <p class="mb-5 text-dark">
+                    Momen indah kami
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
-    <div class="gallery_grid">
+    <!-- ===================================== -->
+    <!-- GALERI FOTO -->
+    <!-- ===================================== -->
 
-        <!-- FOTO -->
+    <div class="linniel_gallery">
 
-        <div class="item item1">
-            <img src="assets/foto/toWEBP/16.webp" loading="lazy">
+        <!-- ROW 1 -->
+
+        <div class="gallery_row_1">
+
+            <div class="foto landscape"
+                onclick="openGallery(0)">
+
+                <img
+                    src="assets/foto/thumbail/1.jpg"
+                    data-full="assets/foto/toWEBP/1.webp"
+                >
+
+            </div>
+
+<div class="foto heart"
+    onclick="openGallery(1)">
+
+    <div class="heart_border"></div>
+
+    <img
+        src="assets/foto/thumbail/23.jpg"
+        data-full="assets/foto/toWEBP/23.webp"
+    >
+
+</div>
+
+
         </div>
 
-        <div class="item item2">
-            <img src="assets/foto/toWEBP/15.webp" loading="lazy">
+        <!-- ROW 2 -->
+
+        <div class="gallery_row_2">
+
+            <div class="foto portrait"
+                onclick="openGallery(2)">
+
+                <img
+                    src="assets/foto//thumbail/13.jpg"
+                    data-full="assets/foto/toWEBP/13.webp"
+                >
+
+            </div>
+
+            <div class="foto landscape_small"
+                onclick="openGallery(3)">
+
+                <img
+                    src="assets/foto/thumbail/5.jpg"
+                    data-full="assets/foto/toWEBP/5.webp"
+                >
+
+            </div>
+
         </div>
 
-        <div class="item item3">
-            <img src="assets/foto/toWEBP/1.webp" loading="lazy">
+        <!-- ROW 3 -->
+
+        <div class="gallery_row_3">
+
+            <div class="foto landscape_big"
+                onclick="openGallery(4)">
+
+                <img
+                    src="assets/foto/thumbail/16.jpg"
+                    data-full="assets/foto/toWEBP/16.webp"
+                >
+
+            </div>
+
+            <div class="foto portrait"
+                onclick="openGallery(5)">
+
+                <img
+                    src="assets/foto/thumbail/14.jpg"
+                    data-full="assets/foto/toWEBP/14.webp"
+                >
+
+            </div>
+
         </div>
 
-        <div class="item item4">
-            <img src="assets/foto/toWEBP/18.webp" loading="lazy">
+        <!-- ROW 4 -->
+
+        <div class="gallery_row_4">
+
+            <div class="foto full"
+                onclick="openGallery(6)">
+
+                <img
+                    src="assets/foto/thumbail/20.jpg"
+                    data-full="assets/foto/toWEBP/20.webp"
+                >
+
+            </div>
+
         </div>
 
-        <div class="item item5">
-            <img src="assets/foto/toWEBP/24.webp" loading="lazy">
-        </div>
+        <!-- ROW 5 -->
 
-        <div class="item item6">
-            <img src="assets/foto/toWEBP/21.webp" loading="lazy">
-        </div>
+        <div class="gallery_row_5">
 
-        <div class="item item7">
-            <img src="assets/foto/toWEBP/13.webp" loading="lazy">
+            <div class="foto small"
+                onclick="openGallery(7)">
+
+                <img
+                    src="assets/foto/thumbail/11.jpg"
+                    data-full="assets/foto/toWEBP/11.webp"
+                >
+
+            </div>
+
+            <div class="foto small"
+                onclick="openGallery(8)">
+
+                <img
+                    src="assets/foto/thumbail/25.jpg"
+                    data-full="assets/foto/toWEBP/25.webp"
+                >
+
+            </div>
+
+            <div class="foto small"
+                onclick="openGallery(9)">
+
+                <img
+                    src="assets/foto/thumbail/15.jpg"
+                    data-full="assets/foto/toWEBP/15.webp"
+                >
+
+            </div>
+
         </div>
 
     </div>
 
-<!-- ======================
-     LIGHTBOX
-====================== -->
+</section>
+
+<!-- ===================================== -->
+<!-- LIGHTBOX -->
+<!-- ===================================== -->
 
 <div class="lightbox" id="lightbox">
 
     <!-- CLOSE -->
-    <span class="close_btn" id="closeLightbox">
+
+    <button class="close_btn"
+        onclick="closeGallery()">
+
         ✕
-    </span>
+
+    </button>
 
     <!-- PREV -->
-    <button class="nav_btn prev_btn" id="prevBtn">
+
+    <button class="nav_btn prev"
+        onclick="prevImage()">
+
         ❮
+
     </button>
 
     <!-- IMAGE -->
-    <img src="" id="lightboxImg">
+
+    <img id="lightboxImage">
 
     <!-- NEXT -->
-    <button class="nav_btn next_btn" id="nextBtn">
+
+    <button class="nav_btn next"
+        onclick="nextImage()">
+
         ❯
+
     </button>
 
 </div>
 
-</section>
-
-<section class="linniel_5">
-  <div class="mengundang text-center mt-3">
-    <h1>Turut Mengundang</h1>
-    <hr class="custom">
-    <div class="kel text-start mx-5">
-      <p>Kel. Besar Malli Dadi,</p>
-      <p>Kel. Besar Nati,</p>
-      <p>Kel. Besar Bpk. Abimelek Benu.</p>
-    </div>
-    <div class="kel text-end mt-5">
-      <p>Kel. Besar Tuauni,</p>
-      <p>Kel. Besar Tpoenifu</p>
-      <p>Kel. Uki,</p>
-      <p>Kel. Besar Kebo,</p>
-      <p>Kel. Besar Bpk. Heya S. Bani.</p>
-    </div>
-  </div>
-</section>
-
-  </main>
 
 </div>
 
-<!-- MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="assets/audio/music.mp3" type="audio/mp3">
-</audio>
+<!-- BOOTSTRAP -->
 
-<!-- JS -->
-<script src="./assets/js/script.js"></script>
-<script src="./assets/js/lightbox.js"></script>
-<script src="./assets/js/countdown.js"></script>
-<script src="./assets/js/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SCRIPT -->
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/countdown.js"></script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/loader.js"></script>
 
 </body>
 </html>

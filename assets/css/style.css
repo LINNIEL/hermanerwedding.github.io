@@ -1,199 +1,135 @@
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    overflow-x: hidden;
-    background: black;
-    font-family: sans-serif;
+    background:#dcdcdc;
+    overflow-x:hidden;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   WRAPPER
-========================= */
+/* ===================================== */
+/* MOBILE WRAPPER */
+/* ===================================== */
 
-.wrapper{
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    background: white;
+.mobile_wrapper{
+    width:100%;
+    max-width:400px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    background:white;
 }
 
-/* =========================
-   COVER
-========================= */
-
-.cover_page{
-
-    position: fixed;
-
-    inset: 0;
-
-    width: 100%;
-    max-width: 400px;
-
-    margin: auto;
-
-    height: 100vh;
-
-    z-index: 9998;
-
-    background-image: url('../bg/23.JPG');
-    background-size: cover;
-    background-position: center;
-
-    transition: 1.2s ease;
-
-    overflow: hidden;
-}
-.couple_name {
-    margin: 0;
-}
-
-.couple_name p{
-    line-height: 0.4;
-}
-
-.titl{
-    font-size: 12px;
-}
-
-.name{
-    font-family: "Great Vibes", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 56px;
-    filter: drop-shadow(5px 5px 10px rgb(250, 253, 45));
-}
-
-.cover_page.open{
-    transform: translateX(-100%);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.cover_overlay{
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.3);
-}
-
-.cover_inner{
-
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 60px 25px;
-}
-
-.cover_top{
-    text-align: center;
-    color: white;
-}
-
-.cover_bottom{
-    text-align: center;
-    color: white;
-}
-.couple_name{
-    font-size: 40px;
-}
-
-.btn_open{
-    border: solid 2px rgb(255, 255, 255);
-    padding: 5px 30px;
-    border-radius: 20px;
-    background: rgb(241, 236, 161);
-    font-weight: bold;
-    filter: drop-shadow(5px 5px 10px rgb(255, 255, 255));
-}
-
-/* =========================
-   MAIN CONTENT
-========================= */
-
-#mainContent{
-    position: relative;
-    z-index: 1;
-}
-
-/* =========================
-   LINNIEL 1
-========================= */
+/* ===================================== */
+/* COVER */
+/* ===================================== */
 
 .linniel_1{
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+    position:fixed;
+
+    width:100%;
+    max-width:400px;
+    height:100vh;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:9999;
+    background-image:url('../background/23.webp');
+    background-size:cover;
+    background-position:center;
+    transition:1.2s ease;
+}
+.nama_mempelai p{
+    line-height: 0.2;
+}
+.nama_mempelai{
+    width: 300px;
+}
+.nama{
+    font-size: 36px;
 }
 
-.kutipan{
-    text-shadow: 5px 4px 4px rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-family: "Story Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    
+.tamu{
+    background-color: black;
+    padding: 5px 50px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
 }
-.ayat{
-    font-size: 26px;
-    font-family: "Story Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  filter: drop-shadow(5px 5px 10px black);
-    
+/* KETIKA DIBUKA */
+
+.linniel_1.open{
+    transform:translateX(-180%);
+    opacity:0;
 }
 
-/* BACKGROUND FIXED */
-.linniel_1_bg{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 400px;
-    height: 100vh;
-    background-image: url('../bg/bg1.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
 }
 
-/* CONTENT */
-.linniel_1_content{
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
+.nama_mempelai h1{
+    font-size:2.3rem;
+    font-weight:bold;
 }
 
-/* =========================
-   LINNIEL 2
-========================= */
+#nama_tamu{
+    font-size:1.3rem;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+/* ===================================== */
+/* SECTION 2 */
+/* ===================================== */
 
 .linniel_2{
+    min-height:100vh;
 
-    position: relative;
-    z-index: 10;
-    background-image: url('../bg/bg_cream.jpg');
-    border-radius: 35px 35px 0 0;
-    margin-top: -40px;
-    min-height: auto;
-    padding: 80px 25px;
+    display:flex;
+    align-items:center;
+
+    padding:20px;
+
+    background-image:url('../background/bg_2.webp');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
+
+.linniel_2 .content{
+    background:rgba(0,0,0,0.5);
+    padding:30px;
+    border-radius:25px;
+}
+
+/* ===================================== */
+/* SECTION 3 */
+/* ===================================== */
+
+.linniel_3{
+    background-image: url('../background/bg_cream.webp');
+    margin-top:-100px;
+    border-radius:40px 40px 0 0;
+    position:relative;
+    z-index:5;
+    padding:50px 20px;
+    min-height: 100vh;
+}
+
 .mempelai_img{
     width: 180px;
     border: solid 2px black;
@@ -201,26 +137,26 @@ body{
     border-radius: 10px;
 }
 
-/* =========================
-   LINNIEL 3
-========================= */
 
-.linniel_3{
-    position: relative;
-    background-image: url('../bg/20.webp');
+/* ===================================== */
+/* SECTION 4 */
+/* ===================================== */
+
+.linniel_4{
+    background-image: url('../background/20.webp');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    padding:50px 20px;
     min-height: auto;
-    padding: 80px 25px;
 }
+
 .wrapper_2{
     position: relative;
     overflow: hidden;
     padding: 20px;
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
 }
 
 .wrapper_2::before{
@@ -228,7 +164,7 @@ body{
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../bg/bg_cream.jpg');
+    background-image: url('../background/bg_cream.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.2;
@@ -254,203 +190,52 @@ body{
     font-weight: bold;
 }
 
-/* =========================
-   LINNIEL 4
-========================= */
+/* ===================================== */
+/* SECTION 5 */
+/* ===================================== */
 
-.linniel_4{
-
-    position: relative;
-    background: white;
-    min-height: 100vh;
-    padding: 80px 25px;
-}
-
-/* =========================
-   CONTENT BOX
-========================= */
-
-.content_box{
-    text-align: center;
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar{
-    width: 0;
-}
-
-
-
-/* =========================
-   LINNIEL 4
-========================= */
-
-.linniel_4{
-
-    width: 100%;
-    padding: 80px 0;
-    background-image: url('../bg/bg_cream.jpg');
-    overflow: hidden;
-    content-visibility: auto;
-    contain-intrinsic-size: 500px;
-}
-
-/* TITLE */
-.title_linniel_4{
-
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* WRAPPER */
-.slider_wrapper{
-
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-/* TRACK */
-.slider_track{
-
-    display: flex;
-    width: max-content;
-    gap: 10px;
-    animation: slideLeft 25s linear infinite;
-}
-
-/* FOTO */
-.slider_track img{
-
-    width: 180px;
-
-    height: 250px;
-
-    object-fit: cover;
-
-    border-radius: 20px;
-
-    flex-shrink: 0;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-.slider_track{
-
-    will-change: transform;
-
-    transform: translateZ(0);
-
-    backface-visibility: hidden;
-}
-.slider_wrapper{
-
-    overflow: hidden;
-
-    contain: paint layout;
-}
-
-/* ANIMATION */
-@keyframes slideLeft{
-
-    from{
-        transform: translateX(0);
-    }
-
-    to{
-        transform: translateX(-50%);
-    }
-}
-
-.gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery-grid .wide {
-      grid-column: span 2;
-    }
-
-    .linniel_5{
-    position: relative;
-    background-image: url('../bg/bg_cream.webp');
-    background-position: center;
+.linniel_5{
+    color:white;
+    padding:100px 20px;
+    background-image: url('../background/bg_cream.webp');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
     min-height: 100vh;
-    padding: 80px 25px;
+}
+
+/* ===================================== */
+/* MUSIC BUTTON */
+/* ===================================== */
+
+.music_button{
+    position:fixed;
+
+    bottom:20px;
+
+    right:calc(50% - 180px);
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    z-index:99998;
+
+    cursor:pointer;
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media(max-width:400px){
+
+    .music_button{
+
+        right:20px;
+
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-hr.custom{
-    width: 280px;
-    height: 1px;
-    border: none;
-    background: rgb(255, 3, 3);
-    margin: 10px auto;
-    position: relative;
-    overflow: visible;
 }
 
-hr.custom::after{
-    content: '♥';
-    position: absolute;
-    background: transparent;
-    color: rgb(255, 0, 0);
-    font-size: 24px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-hr.custom_2{
-    width: 380px;
-    height: 1px;
-    border: none;
-    background: rgb(255, 0, 0);
-    margin: 10px auto;
-    position: relative;
-    overflow: visible;
-}
-
-hr.custom_2::after{
-    content: '♥';
-    position: absolute;
-    background: transparent;
-    color: rgb(255, 0, 0);
-    font-size: 24px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}

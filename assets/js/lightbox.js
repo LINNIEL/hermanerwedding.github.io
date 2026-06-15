@@ -1,52 +1,54 @@
-// ======================
-// LIGHTBOX GALLERY
-// ======================
 
-const galleryImages = document.querySelectorAll('.gallery_grid img');
+/* ===================================== */
+/* IMAGE DATA */
+/* ===================================== */
 
-const lightbox = document.getElementById('lightbox');
+const galleryImages = document.querySelectorAll(
+    ".foto img"
+);
 
-const lightboxImg = document.getElementById('lightboxImg');
+const lightbox = document.getElementById(
+    "lightbox"
+);
 
-const closeLightbox = document.getElementById('closeLightbox');
-
-const nextBtn = document.getElementById('nextBtn');
-
-const prevBtn = document.getElementById('prevBtn');
+const lightboxImage = document.getElementById(
+    "lightboxImage"
+);
 
 let currentIndex = 0;
 
-// OPEN IMAGE
-galleryImages.forEach((img, index) => {
+/* ===================================== */
+/* OPEN */
+/* ===================================== */
 
-    img.addEventListener('click', () => {
+function openGallery(index){
 
-        currentIndex = index;
+    currentIndex = index;
 
-        showImage();
+    const fullImage =
+        galleryImages[index].dataset.full;
 
-        lightbox.classList.add('show');
+    lightboxImage.src = fullImage;
 
-    });
-
-});
-
-// SHOW IMAGE
-function showImage(){
-
-    lightboxImg.src = galleryImages[currentIndex].src;
+    lightbox.classList.add("active");
 
 }
 
-// CLOSE
-closeLightbox.addEventListener('click', () => {
+/* ===================================== */
+/* CLOSE */
+/* ===================================== */
 
-    lightbox.classList.remove('show');
+function closeGallery(){
 
-});
+    lightbox.classList.remove("active");
 
-// NEXT
-nextBtn.addEventListener('click', () => {
+}
+
+/* ===================================== */
+/* NEXT */
+/* ===================================== */
+
+function nextImage(){
 
     currentIndex++;
 
@@ -56,67 +58,72 @@ nextBtn.addEventListener('click', () => {
 
     }
 
-    showImage();
+    lightboxImage.src =
+        galleryImages[currentIndex].dataset.full;
 
-});
+}
 
-// PREV
-prevBtn.addEventListener('click', () => {
+/* ===================================== */
+/* PREV */
+/* ===================================== */
+
+function prevImage(){
 
     currentIndex--;
 
     if(currentIndex < 0){
 
-        currentIndex = galleryImages.length - 1;
+        currentIndex =
+            galleryImages.length - 1;
 
     }
 
-    showImage();
+    lightboxImage.src =
+        galleryImages[currentIndex].dataset.full;
 
-});
+}
 
-// ======================
-// SWIPE MOBILE
-// ======================
+/* ===================================== */
+/* SWIPE MOBILE */
+/* ===================================== */
 
-let startX = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
-lightbox.addEventListener('touchstart', (e) => {
+lightbox.addEventListener(
+    "touchstart",
+    function(e){
 
-    startX = e.touches[0].clientX;
+        touchStartX =
+            e.changedTouches[0].screenX;
 
-});
+    }
+);
 
-lightbox.addEventListener('touchend', (e) => {
+lightbox.addEventListener(
+    "touchend",
+    function(e){
 
-    let endX = e.changedTouches[0].clientX;
+        touchEndX =
+            e.changedTouches[0].screenX;
 
-    // SWIPE LEFT
-    if(startX - endX > 50){
+        handleSwipe();
 
-        currentIndex++;
+    }
+);
 
-        if(currentIndex >= galleryImages.length){
+function handleSwipe(){
 
-            currentIndex = 0;
+    if(touchEndX < touchStartX - 50){
 
-        }
+        nextImage();
 
-        showImage();
     }
 
-    // SWIPE RIGHT
-    if(endX - startX > 50){
+    if(touchEndX > touchStartX + 50){
 
-        currentIndex--;
+        prevImage();
 
-        if(currentIndex < 0){
-
-            currentIndex = galleryImages.length - 1;
-
-        }
-
-        showImage();
     }
 
-});
+}

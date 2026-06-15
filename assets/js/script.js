@@ -1,44 +1,79 @@
-// ======================
-// GENERATE NAMA TAMU
-// ======================
+
+/* ===================================== */
+/* LOCK SCROLL */
+/* ===================================== */
+
+document.body.style.overflow = "hidden";
+
+/* ===================================== */
+/* AMBIL NAMA TAMU */
+/* ===================================== */
 
 const params = new URLSearchParams(window.location.search);
 
-const guest = params.get("to");
+let nama = params.get("to");
 
-const guestName = document.getElementById("guestName");
+if(nama){
 
-if(guest){
+    nama = decodeURIComponent(
+        nama.replace(/\+/g, " ")
+    );
 
-    guestName.innerText = decodeURIComponent(guest);
-
-}else{
-
-    guestName.innerText = "Tamu Undangan";
+    document.getElementById("nama_tamu").innerText = nama;
 
 }
 
-// ======================
-// OPEN INVITATION
-// ======================
+/* ===================================== */
+/* ELEMENT */
+/* ===================================== */
 
-const openBtn = document.getElementById("openInvitation");
+const bukaBtn = document.getElementById("bukaUndangan");
 
-const coverPage = document.getElementById("coverPage");
+const cover = document.getElementById("cover");
 
-const music = document.getElementById("bgMusic");
+const music = document.getElementById("music");
 
-openBtn.addEventListener("click", function(){
+const musicBtn = document.getElementById("musicBtn");
 
-    // Swipe cover
-    coverPage.classList.add("open");
+/* ===================================== */
+/* BUKA UNDANGAN */
+/* ===================================== */
 
-    // Play music
+bukaBtn.addEventListener("click", function(){
+
+    cover.classList.add("open");
+
+    document.body.style.overflow = "auto";
+
     music.play();
+
+    setTimeout(() => {
+
+        cover.style.display = "none";
+
+    }, 1200);
 
 });
 
+/* ===================================== */
+/* MUSIC CONTROL */
+/* ===================================== */
 
-const sliderTrack = document.getElementById("sliderTrack");
+musicBtn.addEventListener("click", function(){
 
-sliderTrack.innerHTML += sliderTrack.innerHTML;
+    if(music.paused){
+
+        music.play();
+
+        musicBtn.innerHTML = "⏸";
+
+    }else{
+
+        music.pause();
+
+        musicBtn.innerHTML = "▶";
+
+    }
+
+});
+
