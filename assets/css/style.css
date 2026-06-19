@@ -34,7 +34,6 @@ body{
 
 .linniel_1{
     position:fixed;
-
     width:100%;
     max-width:400px;
     height:100vh;
@@ -42,7 +41,7 @@ body{
     left:50%;
     transform:translateX(-50%);
     z-index:9999;
-    background-image:url('../background/23.webp');
+    background-image:url('../background/bg_1.jpg');
     background-size:cover;
     background-position:center;
     transition:1.2s ease;
@@ -52,20 +51,18 @@ body{
 }
 .nama_mempelai{
     width: 300px;
+    margin-top: 10px;
 }
 .nama{
-    font-size: 36px;
+    font-size: 66px;
+    font-family: "Romanesco", cursive;
+    font-style: normal;
+    filter: drop-shadow(4px 4px 10px white);
 }
 
 .tamu{
-    background-color: black;
     padding: 5px 50px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.1);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
 }
 .tamu_box{
     padding-bottom: 20px;
@@ -89,9 +86,12 @@ body{
 }
 
 #nama_tamu{
-    font-size:1.3rem;
     font-weight:bold;
     margin:15px 0;
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
 }
 
 /* ===================================== */
@@ -116,6 +116,21 @@ body{
     border-radius:25px;
 }
 
+.kutipan{
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+}
+.ayat{
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+}
+.custom{
+    color: red;
+}
 /* ===================================== */
 /* SECTION 3 */
 /* ===================================== */
@@ -138,6 +153,12 @@ body{
     border: solid 2px black;
     padding: 10px;
     border-radius: 10px;
+}
+.nama_2{
+    font-family: "Romanesco", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
 }
 
 
@@ -206,13 +227,25 @@ body{
     min-height: 100vh;
 }
 .linniel_6{
-    background-image: url(../background/22.jpg);
+    background-image: url(../background/bg_3.jpg);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
 }
 .kel p{
     line-height: 0.5;
+}
+.linniel_7{
+    background-image: url('../background/bg_cream.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.happy_2{
+    width: 330px;
+    border-radius: 20px;
+    filter: drop-shadow(4px 4px 10px white);
 }
 
 /* ===================================== */

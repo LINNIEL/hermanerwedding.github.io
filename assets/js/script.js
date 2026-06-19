@@ -11,13 +11,9 @@ document.body.style.overflow = "hidden";
 
 const params = new URLSearchParams(window.location.search);
 
-let nama = params.get("to");
+const nama = params.get("to");
 
-if(nama){
-
-    nama = decodeURIComponent(
-        nama.replace(/\+/g, " ")
-    );
+if (nama) {
 
     document.getElementById("nama_tamu").innerText = nama;
 
@@ -39,6 +35,7 @@ const musicBtn = document.getElementById("musicBtn");
 /* BUKA UNDANGAN */
 /* ===================================== */
 
+
 bukaBtn.addEventListener("click", function(){
 
     cover.classList.add("open");
@@ -51,9 +48,14 @@ bukaBtn.addEventListener("click", function(){
 
         cover.style.display = "none";
 
+        // Hitung ulang semua posisi elemen AOS
+        AOS.refreshHard();
+
     }, 1200);
 
 });
+
+
 
 /* ===================================== */
 /* MUSIC CONTROL */
