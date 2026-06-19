@@ -49,6 +49,9 @@ body{
 .nama_mempelai p{
     line-height: 0.2;
 }
+.dan_img{
+    width: 120px;
+}
 .nama_mempelai{
     width: 300px;
     margin-top: 10px;
