@@ -91,12 +91,20 @@ body{
 #nama_tamu{
     font-weight:bold;
     margin:15px 0;
-    font-family: "Story Script", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 26px;
+    font-size: 18px;
+    white-space: nowrap;
 }
-
+.btn{
+    background: transparent;
+    color: white;
+    border: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 5px 50px;
+    box-shadow: 4px 4px 15px rgb(255, 255, 255);
+}
 /* ===================================== */
 /* SECTION 2 */
 /* ===================================== */
@@ -109,8 +117,9 @@ body{
     background-image:url('../background/bg_2.webp');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
-    ;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
 }
 
 .linniel_2 .content{
@@ -146,7 +155,7 @@ body{
     margin-top:-100px;
     border-radius:40px 40px 0 0;
     position:relative;
-    z-index:5;
+    z-index:100;
     padding:50px 20px;
     min-height: 100vh;
 }
